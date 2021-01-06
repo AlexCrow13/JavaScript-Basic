@@ -187,10 +187,16 @@ console.log('"0" === 0: ' + ( '0' === 0));
 //6 (2+2)*16
 //7 (2+2)*32
 
+// 5, 25, 125, 625, 3125, 15625
+//1 5
+//2 5*5
+//3 (5*5)*5
+//4 (5*5)*25
+
 console.log('Задание 8');
 
 function power(val, pow){
-    return pow > 1 ? power(val,pow-1)*2 : val;
+    return pow > 1 ? power(val,pow-1)*val : val;
 }
 
-console.log(power(2,10));
+console.log(power(3,5));
